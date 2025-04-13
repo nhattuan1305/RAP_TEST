@@ -1,0 +1,29 @@
+{
+    "name": "ZVNEXT_RAP_TEST_001",
+    "description": "RAP Test Package",
+    "packageType": "development",
+    "applicationComponent": "ZVNEXT_RAP_TEST_001",
+    "transportLayer": "ZDEV",
+    "objects": [
+        {
+            "name": "ZF901T",
+            "type": "TABL",
+            "description": "Table log ZF901T"
+        },
+        {
+            "name": "ZF901T_DRAFT",
+            "type": "CDS",
+            "description": "Draft Table for ZF901T"
+        },
+        {
+            "name": "ZBP_ZF901T_DRAFT",
+            "type": "CLAS",
+            "description": "Behavior Implementation for ZF901T"
+        },
+        {
+            "name": "ZF901T_DRAFT",
+            "type": "SRVD",
+            "description": "Service Definition for ZF901T"
+        }
+    ]
+} 
