@@ -1,0 +1,28 @@
+managed implementation in class zbp_zf901t_draft unique;
+strict;
+
+define behavior for ZF901T_Draft alias ZF901T
+persistent table ZF901T
+draft table ZF901T_Draft
+lock master
+authorization master ( instance )
+{
+    create;
+    update;
+    delete;
+    
+    field ( readonly ) Client;
+    field ( readonly ) LocalCreatedBy;
+    field ( readonly ) LocalCreatedAt;
+    field ( readonly ) LocalLastChangedBy;
+    field ( readonly ) LocalLastChangedAt;
+    field ( readonly ) LastChangedAt;
+    
+    draft action Edit;
+    draft action Activate;
+    draft action Discard;
+    draft action Resume;
+    draft determine action Prepare;
+    
+    validation validateFields on save { field CompanyCode, FiscalYearBase, AccountingDocumentBase, AllocatedLineItem; }
+} 

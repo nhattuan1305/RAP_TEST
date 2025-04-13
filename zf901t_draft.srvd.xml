@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:DataServices>
+        <Schema Namespace="ZF901T_Draft" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityType Name="ZF901T">
+                <Key>
+                    <PropertyRef Name="DraftUUID"/>
+                    <PropertyRef Name="IsActiveEntity"/>
+                </Key>
+                <Property Name="DraftUUID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="IsActiveEntity" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="Client" Type="Edm.String" MaxLength="3"/>
+                <Property Name="CompanyCode" Type="Edm.String" MaxLength="4"/>
+                <Property Name="FiscalYearBase" Type="Edm.String" MaxLength="4"/>
+                <Property Name="AccountingDocumentBase" Type="Edm.String" MaxLength="10"/>
+                <Property Name="AllocatedLineItem" Type="Edm.String" MaxLength="5"/>
+                <Property Name="FiscalYear" Type="Edm.String" MaxLength="4"/>
+                <Property Name="AccountingDocument" Type="Edm.String" MaxLength="10"/>
+                <Property Name="SourceLedger" Type="Edm.String" MaxLength="2"/>
+                <Property Name="PostingDate" Type="Edm.DateTime"/>
+                <Property Name="GlaccountS" Type="Edm.String" MaxLength="10"/>
+                <Property Name="GlaccountNameS" Type="Edm.String" MaxLength="20"/>
+                <Property Name="GlaccountH" Type="Edm.String" MaxLength="10"/>
+                <Property Name="GlaccountNameH" Type="Edm.String" MaxLength="20"/>
+                <Property Name="AmountingTransactionCurrency" Type="Edm.Decimal" Precision="23" Scale="3"/>
+                <Property Name="CompanyCodeCurrency" Type="Edm.String" MaxLength="5"/>
+                <Property Name="HeaderText" Type="Edm.String" MaxLength="25"/>
+                <Property Name="AllocateMonths" Type="Edm.String" MaxLength="3"/>
+                <Property Name="LogStatus" Type="Edm.String" MaxLength="1"/>
+                <Property Name="LogMessage" Type="Edm.String" MaxLength="100"/>
+                <Property Name="LocalCreatedBy" Type="Edm.String" MaxLength="12"/>
+                <Property Name="LocalCreatedAt" Type="Edm.DateTimeOffset"/>
+                <Property Name="LocalLastChangedBy" Type="Edm.String" MaxLength="12"/>
+                <Property Name="LocalLastChangedAt" Type="Edm.DateTimeOffset"/>
+                <Property Name="LastChangedAt" Type="Edm.DateTimeOffset"/>
+                <Property Name="DraftEntityCreationDateTime" Type="Edm.DateTimeOffset"/>
+                <Property Name="DraftEntityLastChangeDateTime" Type="Edm.DateTimeOffset"/>
+            </EntityType>
+            <EntityContainer Name="ZF901T_Draft_Entities">
+                <EntitySet Name="ZF901T" EntityType="ZF901T_Draft.ZF901T"/>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx> 

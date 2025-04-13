@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for ZF901T'
+define service ZF901T_Draft {
+    expose ZF901T_Draft as ZF901T;
+} 

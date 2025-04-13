@@ -1,0 +1,32 @@
+@EndUserText.label : 'Table log ZF901T'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zf901t {
+  key client                     : abap.clnt not null;
+  key company_code               : bukrs not null;
+  key fiscal_year_base           : gjahr not null;
+  key accounting_document_base   : belnr_d not null;
+  key allocated_line_item        : abap.numc(5) not null;
+  fiscal_year                    : gjahr;
+  accounting_document            : belnr_d;
+  source_ledger                  : fins_ledger;
+  posting_date                   : budat;
+  glaccount_s                    : hkont;
+  glaccount_name_s               : abap.char(20);
+  glaccount_h                    : hkont;
+  glaccount_name_h               : abap.char(20);
+  @Semantics.amount.currencyCode : 'zf901t.company_code_currency'
+  amounting_transaction_currency : dmbtr;
+  company_code_currency          : waers;
+  header_text                    : bktxt;
+  allocate_months                : abap.numc(3);
+  log_status                     : abap.char(1);
+  log_message                    : abap.char(100);
+  local_created_by               : abp_creation_user;
+  local_created_at               : abp_creation_tstmpl;
+  local_last_changed_by          : abp_locinst_lastchange_user;
+  local_last_changed_at          : abp_locinst_lastchange_tstmpl;
+  last_changed_at                : abp_lastchange_tstmpl;
+} 
